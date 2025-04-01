@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Test Application Form</title>
+        <style>
+            body { font-family: sans-serif; }
+            .form-group { margin: 10px 0; }
+            label { display: inline-block; width: 100px; }
+            input[type="file"] { width: 200px; }
+        </style>
+    </head>
+    <body>
+        <h1>Mock Job Application</h1>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input id="name" name="name" type="text" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="text" />
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input id="phone" name="phone" type="text" />
+        </div>
+        <div class="form-group">
+            <label for="resume">Resume:</label>
+            <input id="resume" name="resume" type="file" />
+        </div>
+        <div class="form-group">
+            <label for="cover_letter">Cover Letter:</label>
+            <textarea id="cover_letter" name="cover_letter" rows="3" cols="30"></textarea>
+        </div>
+        <button id="apply-btn" class="submit">Apply</button>
+
+        <script>
+            // Just a mock "submit" behavior:
+            document.querySelector('#apply-btn').onclick = function() {
+            // This is where you'd normally do some submission logic
+            alert("Form Submitted!");
+            };
+        </script>
+    </body>
+</html>
